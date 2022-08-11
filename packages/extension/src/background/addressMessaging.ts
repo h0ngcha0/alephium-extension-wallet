@@ -1,9 +1,9 @@
-import { AccountMessage } from "../shared/messages/AccountMessage"
+import { AddressMessage } from "../shared/messages/AddressMessage"
 import { sendMessageToUi } from "./activeTabs"
 import { HandleMessage, UnhandledMessage } from "./background"
 import { encryptForUi } from "./crypto"
 
-export const handleAccountMessage: HandleMessage<AccountMessage> = async ({
+export const handleAddressMessage: HandleMessage<AddressMessage> = async ({
   msg,
   background: { wallet },
   messagingKeys: { privateKey },

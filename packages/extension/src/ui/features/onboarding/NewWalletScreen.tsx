@@ -8,7 +8,7 @@ import { Button } from "../../components/Button"
 import { IconBar } from "../../components/IconBar"
 import { InputText } from "../../components/InputText"
 import { routes } from "../../routes"
-import { connectAccount } from "../../services/backgroundAccounts"
+import { connectAddress } from "../../services/backgroundAddresses"
 import { FormError, H2, P } from "../../theme/Typography"
 import { StickyGroup } from "../actions/ConfirmScreen"
 import { deployAddress } from "../addresses/addresses.service"
@@ -68,7 +68,7 @@ export const NewWalletScreen: FC<NewWalletScreenProps> = ({
     try {
       const newAddress = await deployAddress(password)
       addAddress(newAddress)
-      connectAccount(newAddress.hash)
+      connectAddress(newAddress.hash)
       navigate(await recover())
     } catch (error: any) {
       useAppState.setState({ error })

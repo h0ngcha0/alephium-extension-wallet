@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { Address } from "../../../shared/Address"
 import { routes } from "../../routes"
 import { makeClickable } from "../../services/a11y"
-import { connectAccount } from "../../services/backgroundAccounts"
+import { connectAddress } from "../../services/backgroundAddresses"
 import { useAddresses } from "../addresses/addresses.state"
 import {
   getAddressName,
@@ -32,7 +32,7 @@ export const AccountListScreenItem: FC<IAccountListScreenItem> = ({
         useAddresses.setState({
           selectedAddress: address,
         })
-        connectAccount(address.hash)
+        connectAddress(address.hash)
         navigate(routes.accountTokens())
       })}
       accountName={addressName}
