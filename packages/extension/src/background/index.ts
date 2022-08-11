@@ -28,7 +28,7 @@ import { Wallet, WalletStorageProps } from "./wallet"
     const storage = new Storage<WalletStorageProps>({}, "wallet")
 
     const onAutoLock = () =>
-      sendMessageToActiveTabsAndUi({ type: "DISCONNECT_ACCOUNT" })
+      sendMessageToActiveTabsAndUi({ type: "DISCONNECT_ADDRESS" })
     const wallet = new Wallet(storage, getNetworkImplementation, onAutoLock)
 
     const actionQueue = await getQueue<ActionItem>({

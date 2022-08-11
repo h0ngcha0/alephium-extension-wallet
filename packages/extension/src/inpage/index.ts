@@ -38,7 +38,7 @@ window.addEventListener(
     if (!alephium) {
       return
     }
-    if (data.type === "CONNECT_ACCOUNT") {
+    if (data.type === "CONNECT_ADDRESS") {
       const { address } = data.data
       if (address !== alephium.selectedAddress) {
         alephium.selectedAddress = address
@@ -52,7 +52,7 @@ window.addEventListener(
           }
         }
       }
-    } else if (data.type === "DISCONNECT_ACCOUNT") {
+    } else if (data.type === "DISCONNECT_ADDRESS") {
       alephium.selectedAddress = undefined
       alephium.isConnected = false
       for (const userEvent of userEventHandlers) {

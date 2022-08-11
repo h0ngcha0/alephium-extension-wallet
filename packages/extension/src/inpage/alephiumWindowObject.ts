@@ -112,8 +112,8 @@ export const alephiumWindowObject: AlephiumWindowObject = {
   },
 
   getAccounts: async (): Promise<Account[]> => {
-    sendMessage({ type: "GET_ACCOUNTS" })
-    const addresses = await waitForMessage("GET_ACCOUNTS_RES", 100)
+    sendMessage({ type: "GET_ADDRESSES" })
+    const addresses = await waitForMessage("GET_ADDRESSES_RES", 100)
     return addresses.map((addr) => {
       const group = groupOfAddress(addr.address)
       return {
