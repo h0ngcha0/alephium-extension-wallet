@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react"
 
 import { assertNever } from "../../services/assertNever"
 import { AccountActivity } from "../accountActivity/AccountActivity"
-import { AccountTokens } from "../accountTokens/AccountTokens"
+import { AccountTokens } from "../addressTokens/AccountTokens"
 import { useSelectedAddress } from "../addresses/addresses.state"
 import { AddressContainer } from "./AddressContainer"
 

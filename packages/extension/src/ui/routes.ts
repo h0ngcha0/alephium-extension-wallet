@@ -44,7 +44,7 @@ export const routes = {
   setupSeedRecovery: routeWithReturnTo("/recovery/seed"),
   confirmSeedRecovery: routeWithReturnTo("/recovery/seed/confirm"),
   lockScreen: route("/lock-screen"),
-  accountTokens: route("/account/tokens"),
+  addressTokens: route("/address/tokens"),
   accountActivity: route("/account/activity"),
   accountHideConfirm: route(
     (accountAddress: string) => `/account/hide-confirm/${accountAddress}`,

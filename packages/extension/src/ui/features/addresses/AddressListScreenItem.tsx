@@ -33,7 +33,7 @@ export const AddressListScreenItem: FC<IAddressListScreenItem> = ({
           selectedAddress: address,
         })
         connectAddress(address.hash)
-        navigate(routes.accountTokens())
+        navigate(routes.addressTokens())
       })}
       accountName={addressName}
       accountAddress={address.hash}

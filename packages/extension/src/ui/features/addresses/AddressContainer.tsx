@@ -66,7 +66,7 @@ export const AddressContainer: FC<AddressScreenContentProps> = ({
       {children}
 
       <AddressFooter>
-        <FooterTab to={routes.accountTokens()}>
+        <FooterTab to={routes.addressTokens()}>
           <AccountBalanceWalletIcon />
           <span>Assets</span>
         </FooterTab>

@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { useAppState } from "./app.state"
 import { AddressListScreen } from "./features/addresses/AddressListScreen"
 import { AddressScreen } from "./features/addresses/AddressScreen"
-import { SendTokenScreen } from "./features/accountTokens/SendTokenScreen"
+import { SendTokenScreen } from "./features/addressTokens/SendTokenScreen"
 import {
   useActions,
   useActionsSubscription,
@@ -74,7 +74,7 @@ const nonWalletRoutes = (
 const walletRoutes = (
   <>
     <Route
-      path={routes.accountTokens.path}
+      path={routes.addressTokens.path}
       element={<AddressScreen tab="assets" />}
     />
     <Route
