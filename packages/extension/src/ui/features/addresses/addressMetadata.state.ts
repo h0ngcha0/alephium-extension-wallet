@@ -1,7 +1,7 @@
 import create from "zustand"
 import { persist } from "zustand/middleware"
 
-export const defaultAddressName = "Unnamed account"
+export const defaultAddressName = "Unnamed Address"
 
 interface State {
   addressNames: Record<string, string>
@@ -34,7 +34,7 @@ export const setDefaultAddressNames = (addresses: string[]) => {
   let names = addressNames
   for (const address of addresses) {
     if (!names[address]) {
-      const name = `Account ${addresses.indexOf(address) + 1}`
+      const name = `Address ${addresses.indexOf(address) + 1}`
       names = {
         ...names,
         [address]: name,

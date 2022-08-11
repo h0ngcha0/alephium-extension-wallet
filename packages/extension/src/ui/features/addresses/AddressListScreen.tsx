@@ -18,14 +18,14 @@ import { Container } from "./AddressContainer"
 import { AddressHeader } from "./AddressHeader"
 import { AddressListScreenItem } from "./AddressListScreenItem"
 
-const AccountList = styled.div`
+const AddressList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
   padding: 48px 32px;
 `
 
-const AccountListWrapper = styled(Container)`
+const AddressListWrapper = styled(Container)`
   display: flex;
   flex-direction: column;
 
@@ -33,7 +33,7 @@ const AccountListWrapper = styled(Container)`
     text-align: center;
   }
 
-  > ${AccountList} {
+  > ${AddressList} {
     width: 100%;
   }
 `
@@ -68,7 +68,7 @@ export const AddressListScreen: FC = () => {
     }
 
     return (
-        <AccountListWrapper header>
+        <AddressListWrapper header>
             <AddressHeader>
                 <Header>
                     <IconButton
@@ -83,11 +83,11 @@ export const AddressListScreen: FC = () => {
                     <NetworkSwitcher />
                 </Header>
             </AddressHeader>
-            <H1>Accounts</H1>
-            <AccountList>
+            <H1>Addresses</H1>
+            <AddressList>
                 {addressesList.length === 0 && (
                     <Paragraph>
-                        No accounts on this network, click below to add one.
+                        No address, click below to add one.
                     </Paragraph>
                 )}
                 {addressesList.map((address) => (
@@ -103,7 +103,7 @@ export const AddressListScreen: FC = () => {
                 >
                     <AddIcon fontSize="large" />
                 </IconButtonCenter>
-            </AccountList>
-        </AccountListWrapper>
+            </AddressList>
+        </AddressListWrapper>
     )
 }

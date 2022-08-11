@@ -43,7 +43,7 @@ window.addEventListener(
       if (address !== alephium.selectedAddress) {
         alephium.selectedAddress = address
         for (const userEvent of userEventHandlers) {
-          if (userEvent.type === "accountsChanged") {
+          if (userEvent.type === "addressesChanged") {
             userEvent.handler([address])
           } else if (userEvent.type === "networkChanged") {
             console.log("network changed")
@@ -56,7 +56,7 @@ window.addEventListener(
       alephium.selectedAddress = undefined
       alephium.isConnected = false
       for (const userEvent of userEventHandlers) {
-        if (userEvent.type === "accountsChanged") {
+        if (userEvent.type === "addressesChanged") {
           userEvent.handler([])
         } else if (userEvent.type === "networkChanged") {
           userEvent.handler(undefined)

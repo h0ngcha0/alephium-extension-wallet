@@ -46,13 +46,9 @@ export const routes = {
   lockScreen: route("/lock-screen"),
   addressTokens: route("/address/tokens"),
   addressActivity: route("/address/activity"),
-  accountHideConfirm: route(
-    (accountAddress: string) => `/account/hide-confirm/${accountAddress}`,
-    `/account/hide-confirm/:accountAddress`,
-  ),
-  accountDeleteConfirm: route(
-    (accountAddress: string) => `/account/delete-confirm/${accountAddress}`,
-    `/account/delete-confirm/:accountAddress`,
+  addressDeleteConfirm: route(
+    (address: string) => `/address/delete-confirm/${address}`,
+    `/address/delete-confirm/:address`,
   ),
   sendScreen: route("/send"),
   sendToken: route("/send-token"),

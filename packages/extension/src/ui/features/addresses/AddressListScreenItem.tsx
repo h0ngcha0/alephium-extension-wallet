@@ -35,8 +35,8 @@ export const AddressListScreenItem: FC<IAddressListScreenItem> = ({
         connectAddress(address.hash)
         navigate(routes.addressTokens())
       })}
-      accountName={addressName}
-      accountAddress={address.hash}
+      addressName={addressName}
+      address={address.hash}
       focus={selectedAddress?.hash === address.hash}
     />
   )

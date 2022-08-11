@@ -10,7 +10,7 @@ import {
 } from "../../services/addresses"
 import { getBalance } from "../../services/backgroundAddresses"
 import { AddressName } from "./AddressName"
-import { AccountAddressWrapper, Address } from "./Address"
+import { AddressWrapper, Address } from "./Address"
 
 const Header = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Header = styled.div`
   width: 250px;
 `
 
-const AccountBalance = styled.div`
+const Balance = styled.div`
   font-weight: 600;
   font-size: 17px;
   text-align: center;
@@ -66,15 +66,15 @@ export const AddressSubHeader: FC<AddressSubHeaderProps> = ({
                     </Header>
                 </div>
             </div>
-            <AccountBalance>{balance?.balanceHint}</AccountBalance>
-            <AccountAddressWrapper style={{ marginBottom: 18 }}>
+            <Balance>{balance?.balanceHint}</Balance>
+            <AddressWrapper style={{ marginBottom: 18 }}>
                 <CopyTooltip copyValue={normalizeAddress(address)} message="Copied!">
                     <Address>
                         {formatTruncatedAddress(address)}
                         <ContentCopyIcon style={{ fontSize: 12 }} />
                     </Address>
                 </CopyTooltip>
-            </AccountAddressWrapper>
+            </AddressWrapper>
         </>
     )
 }

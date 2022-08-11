@@ -4,8 +4,8 @@ import styled from "styled-components"
 import { formatTruncatedAddress } from "../../services/addresses"
 
 export interface IAddressListItem {
-    accountName: string
-    accountAddress: string
+    addressName: string
+    address: string
     focus?: boolean
     children?: ReactNode
     // ...rest
@@ -36,12 +36,12 @@ export const AddressListItemWrapper = styled.div<AddressListItemWrapperProps>`
   }
 `
 
-const AccountColumn = styled.div`
+const AddressColumn = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-const AccountRow = styled.div`
+const AddressRow = styled.div`
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -55,28 +55,28 @@ const AddressName = styled.h1`
   margin: 0 0 5px 0;
 `
 
-const AccountAddress = styled.div`
+const Address = styled.div`
   font-size: 13px;
 `
 
 export const AddressListItem: FC<IAddressListItem> = ({
-    accountName,
-    accountAddress,
+    addressName,
+    address,
     focus,
     children,
     ...rest
 }) => {
     return (
         <AddressListItemWrapper focus={focus} {...rest}>
-            <AccountRow>
-                <AccountColumn>
-                    <AddressName>{accountName}</AddressName>
-                    <AccountAddress>
-                        {formatTruncatedAddress(accountAddress)}
-                    </AccountAddress>
-                </AccountColumn>
-                <AccountColumn>{children}</AccountColumn>
-            </AccountRow>
+            <AddressRow>
+                <AddressColumn>
+                    <AddressName>{addressName}</AddressName>
+                    <Address>
+                        {formatTruncatedAddress(address)}
+                    </Address>
+                </AddressColumn>
+                <AddressColumn>{children}</AddressColumn>
+            </AddressRow>
         </AddressListItemWrapper>
     )
 }
