@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react"
 
 import { assertNever } from "../../services/assertNever"
 import { AccountActivity } from "../accountActivity/AccountActivity"
-import { AccountTokens } from "../addressTokens/AccountTokens"
+import { AddressTokens } from "../addressTokens/AddressTokens"
 import { useSelectedAddress } from "../addresses/addresses.state"
 import { AddressContainer } from "./AddressContainer"
 
@@ -17,7 +17,7 @@ export const AddressScreen: FC<AddressScreenProps> = ({ tab }) => {
   if (!address) {
     body = <></>
   } else if (tab === "assets") {
-    body = <AccountTokens address={address} />
+    body = <AddressTokens address={address} />
   } else if (tab === "activity") {
     body = <AccountActivity address={address} />
   } else {

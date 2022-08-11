@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const AccountName = styled.h1`
+export const AddressName = styled.h1`
   font-style: normal;
   font-weight: 700;
   font-size: 22px;

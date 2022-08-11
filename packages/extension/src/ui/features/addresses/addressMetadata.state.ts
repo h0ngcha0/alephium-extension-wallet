@@ -1,7 +1,7 @@
 import create from "zustand"
 import { persist } from "zustand/middleware"
 
-export const defaultAccountName = "Unnamed account"
+export const defaultAddressName = "Unnamed account"
 
 interface State {
   addressNames: Record<string, string>
@@ -27,7 +27,7 @@ export const useAddressMetadata = create<State>(
 export const getAddressName = (
   address: string,
   addressNames: Record<string, string>,
-): string => addressNames[address] || defaultAccountName
+): string => addressNames[address] || defaultAddressName
 
 export const setDefaultAddressNames = (addresses: string[]) => {
   const { addressNames } = useAddressMetadata.getState()
