@@ -3,8 +3,8 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import styled from "styled-components"
 
 import { useAppState } from "./app.state"
-import { AccountListScreen } from "./features/accounts/AccountListScreen"
-import { AccountScreen } from "./features/accounts/AccountScreen"
+import { AddressListScreen } from "./features/addresses/AddressListScreen"
+import { AddressScreen } from "./features/addresses/AddressScreen"
 import { SendTokenScreen } from "./features/accountTokens/SendTokenScreen"
 import {
   useActions,
@@ -75,14 +75,14 @@ const walletRoutes = (
   <>
     <Route
       path={routes.accountTokens.path}
-      element={<AccountScreen tab="assets" />}
+      element={<AddressScreen tab="assets" />}
     />
     <Route
       path={routes.accountActivity.path}
-      element={<AccountScreen tab="activity" />}
+      element={<AddressScreen tab="activity" />}
     />
     <Route path={routes.sendToken.path} element={<SendTokenScreen />} />
-    <Route path={routes.accounts.path} element={<AccountListScreen />} />
+    <Route path={routes.accounts.path} element={<AddressListScreen />} />
     <Route path={routes.settings.path} element={<SettingsScreen />} />
     <Route path={routes.settingsSeed.path} element={<SeedSettingsScreen />} />
     <Route

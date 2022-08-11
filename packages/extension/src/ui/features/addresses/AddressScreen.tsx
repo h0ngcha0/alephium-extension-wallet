@@ -4,13 +4,13 @@ import { assertNever } from "../../services/assertNever"
 import { AccountActivity } from "../accountActivity/AccountActivity"
 import { AccountTokens } from "../accountTokens/AccountTokens"
 import { useSelectedAddress } from "../addresses/addresses.state"
-import { AccountContainer } from "./AccountContainer"
+import { AddressContainer } from "./AddressContainer"
 
-interface AccountScreenProps {
+interface AddressScreenProps {
   tab: "assets" | "activity"
 }
 
-export const AccountScreen: FC<AccountScreenProps> = ({ tab }) => {
+export const AddressScreen: FC<AddressScreenProps> = ({ tab }) => {
   const address = useSelectedAddress()
 
   let body: ReactNode
@@ -24,5 +24,5 @@ export const AccountScreen: FC<AccountScreenProps> = ({ tab }) => {
     assertNever(tab)
   }
 
-  return <AccountContainer>{body}</AccountContainer>
+  return <AddressContainer>{body}</AddressContainer>
 }

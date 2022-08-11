@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { formatTruncatedAddress } from "../../services/addresses"
 
-export interface IAccountListItem {
+export interface IAddressListItem {
   accountName: string
   accountAddress: string
   focus?: boolean
@@ -12,9 +12,9 @@ export interface IAccountListItem {
   [x: string]: any
 }
 
-type AccountListItemWrapperProps = Pick<IAccountListItem, "focus">
+type AddressListItemWrapperProps = Pick<IAddressListItem, "focus">
 
-export const AccountListItemWrapper = styled.div<AccountListItemWrapperProps>`
+export const AddressListItemWrapper = styled.div<AddressListItemWrapperProps>`
   cursor: pointer;
   background-color: ${({ focus }) =>
     focus ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.1)"};
@@ -59,7 +59,7 @@ const AccountAddress = styled.div`
   font-size: 13px;
 `
 
-export const AccountListItem: FC<IAccountListItem> = ({
+export const AddressListItem: FC<IAddressListItem> = ({
   accountName,
   accountAddress,
   focus,
@@ -67,7 +67,7 @@ export const AccountListItem: FC<IAccountListItem> = ({
   ...rest
 }) => {
   return (
-    <AccountListItemWrapper focus={focus} {...rest}>
+    <AddressListItemWrapper focus={focus} {...rest}>
       <AccountRow>
         <AccountColumn>
           <AccountName>{accountName}</AccountName>
@@ -77,6 +77,6 @@ export const AccountListItem: FC<IAccountListItem> = ({
         </AccountColumn>
         <AccountColumn>{children}</AccountColumn>
       </AccountRow>
-    </AccountListItemWrapper>
+    </AddressListItemWrapper>
   )
 }

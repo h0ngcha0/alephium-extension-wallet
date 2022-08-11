@@ -10,14 +10,14 @@ import {
   getAddressName,
   useAddressMetadata,
 } from "../addresses/addressMetadata.state"
-import { AccountListItem } from "./AccountListItem"
+import { AddressListItem } from "./AddressListItem"
 
-interface IAccountListScreenItem {
+interface IAddressListScreenItem {
   address: Address
   selectedAddress?: Address
 }
 
-export const AccountListScreenItem: FC<IAccountListScreenItem> = ({
+export const AddressListScreenItem: FC<IAddressListScreenItem> = ({
   address,
   selectedAddress,
 }) => {
@@ -27,7 +27,7 @@ export const AccountListScreenItem: FC<IAccountListScreenItem> = ({
   const addressName = getAddressName(address.hash, addressNames)
 
   return (
-    <AccountListItem
+    <AddressListItem
       {...makeClickable(() => {
         useAddresses.setState({
           selectedAddress: address,

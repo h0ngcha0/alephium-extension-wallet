@@ -14,9 +14,9 @@ import { deployAddress } from "../addresses/addresses.service"
 import { useAddresses } from "../addresses/addresses.state"
 import { NetworkSwitcher } from "../networks/NetworkSwitcher"
 import { recover } from "../recovery/recovery.service"
-import { Container } from "./AccountContainer"
-import { AccountHeader } from "./AccountHeader"
-import { AccountListScreenItem } from "./AccountListScreenItem"
+import { Container } from "./AddressContainer"
+import { AddressHeader } from "./AddressHeader"
+import { AddressListScreenItem } from "./AddressListScreenItem"
 
 const AccountList = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ const Paragraph = styled(P)`
   text-align: center;
 `
 
-export const AccountListScreen: FC = () => {
+export const AddressListScreen: FC = () => {
     const navigate = useNavigate()
     const { addresses, selectedAddress, addAddress } = useAddresses()
 
@@ -69,7 +69,7 @@ export const AccountListScreen: FC = () => {
 
     return (
         <AccountListWrapper header>
-            <AccountHeader>
+            <AddressHeader>
                 <Header>
                     <IconButton
                         size={36}
@@ -82,7 +82,7 @@ export const AccountListScreen: FC = () => {
                     </IconButton>
                     <NetworkSwitcher />
                 </Header>
-            </AccountHeader>
+            </AddressHeader>
             <H1>Accounts</H1>
             <AccountList>
                 {addressesList.length === 0 && (
@@ -91,7 +91,7 @@ export const AccountListScreen: FC = () => {
                     </Paragraph>
                 )}
                 {addressesList.map((address) => (
-                    <AccountListScreenItem
+                    <AddressListScreenItem
                         key={address.hash}
                         address={address}
                         selectedAddress={selectedAddress}
