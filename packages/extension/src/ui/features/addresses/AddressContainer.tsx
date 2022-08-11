@@ -70,7 +70,7 @@ export const AddressContainer: FC<AddressScreenContentProps> = ({
           <AccountBalanceWalletIcon />
           <span>Assets</span>
         </FooterTab>
-        <FooterTab to={routes.accountActivity()}>
+        <FooterTab to={routes.addressActivity()}>
           <FormatListBulletedIcon />
           <span>Activity</span>
         </FooterTab>
