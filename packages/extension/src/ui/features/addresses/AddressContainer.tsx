@@ -54,8 +54,8 @@ export const AddressContainer: FC<AddressScreenContentProps> = ({
         <Header>
           <Link
             role="button"
-            aria-label="Show account list"
-            to={routes.accounts()}
+            aria-label="Show addresses"
+            to={routes.addresses()}
           >
             <ViewListIcon />
           </Link>

@@ -56,7 +56,7 @@ export const routes = {
   ),
   sendScreen: route("/send"),
   sendToken: route("/send-token"),
-  accounts: route("/accounts"),
+  addresses: route("/addresses"),
   exportPrivateKey: route("/export-private-key"),
   token: route(
     (tokenAddress: string) => `/tokens/${tokenAddress}`,

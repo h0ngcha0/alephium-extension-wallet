@@ -82,7 +82,7 @@ const walletRoutes = (
       element={<AddressScreen tab="activity" />}
     />
     <Route path={routes.sendToken.path} element={<SendTokenScreen />} />
-    <Route path={routes.accounts.path} element={<AddressListScreen />} />
+    <Route path={routes.addresses.path} element={<AddressListScreen />} />
     <Route path={routes.settings.path} element={<SettingsScreen />} />
     <Route path={routes.settingsSeed.path} element={<SeedSettingsScreen />} />
     <Route
