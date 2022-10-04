@@ -88,11 +88,11 @@ module.exports = {
     }),
 
     !isProd && // eslint should run before the build starts
-      new ESLintPlugin({
-        extensions: ["ts", "tsx"],
-        fix: true,
-        threads: true,
-      }),
+    new ESLintPlugin({
+      extensions: ["ts", "tsx"],
+      fix: true,
+      threads: true,
+    }),
 
     new ForkTsCheckerWebpackPlugin(), // does the type checking in a separate process (non-blocking in dev) as esbuild is skipping type checking
     new Dotenv({
@@ -114,20 +114,23 @@ module.exports = {
   },
   optimization: isProd
     ? {
-        minimize: true,
-        minimizer: [
-          new ESBuildMinifyPlugin({
-            target: "es2015", // Syntax to compile to (see options below for possible values)
-          }),
-        ],
-        splitChunks: {
-          chunks: "async",
-        },
-      }
+      minimize: true,
+      minimizer: [
+        new ESBuildMinifyPlugin({
+          target: "es2015", // Syntax to compile to (see options below for possible values)
+        }),
+      ],
+      splitChunks: {
+        chunks: "async",
+      },
+    }
     : undefined,
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     sourceMapFilename: "../sourcemaps/[file].map",
   },
+  experiments: {
+    syncWebAssembly: true
+  }
 }

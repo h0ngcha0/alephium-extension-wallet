@@ -19,27 +19,39 @@
     find-up "^2.1.0"
     fs-extra "^10.0.1"
 
-"@alephium/web3-wallet@0.2.0-rc.15":
-  version "0.2.0-rc.15"
-  resolved "https://registry.yarnpkg.com/@alephium/web3-wallet/-/web3-wallet-0.2.0-rc.15.tgz#d40b2b7fcba4a31c97f5b5fb20d93ad3314574a7"
-  integrity sha512-t7Wq4F0JvQrZEMkYZs/gbfI+yKSTyHntSi4dBJSM/+zNKiM27WT8EZI3SAv+/6d9Y3tlZFXrlsrpOQVixRwImQ==
+"@alephium/web3-wallet@0.2.0-rc.19":
+  version "0.2.0-rc.19"
+  resolved "https://registry.yarnpkg.com/@alephium/web3-wallet/-/web3-wallet-0.2.0-rc.19.tgz#ebff250e8c17299f2866daacff0837d7216468cf"
+  integrity sha512-arRicDXWRG37b3c+z2EaFRwwUkojASr8GN5CSwiJGdiqbAOwJWUKW7vhwYWFAilSEh/sdBKk2Tb7xf37kt5iqg==
   dependencies:
-    "@alephium/web3" "^0.2.0-rc.15"
-    "@types/node" "^16.7.8"
+    "@alephium/web3" "^0.2.0-rc.19"
+    "@types/node" "16.7.8"
     bip32 "2.0.6"
     bip39 "3.0.4"
     buffer "^6.0.3"
     fs-extra "10.0.1"
 
-"@alephium/web3@0.2.0-rc.15", "@alephium/web3@^0.2.0-rc.15":
-  version "0.2.0-rc.15"
-  resolved "https://registry.yarnpkg.com/@alephium/web3/-/web3-0.2.0-rc.15.tgz#4db88460b18eee98f39ae92d5a3f40c1a1312503"
-  integrity sha512-ycBOEmzAeETiDFIwjWlJ1rWQ/4r8zitrNgCDxHhiIgmJ4ea7VaGuQhY4XvqMbJSa8RTvAKIMG2kUO0eDDAebXg==
+"@alephium/web3@0.2.0-rc.19":
+  version "0.2.0-rc.19"
+  resolved "https://registry.yarnpkg.com/@alephium/web3/-/web3-0.2.0-rc.19.tgz#2647963fbb3c00c47b2b6a006cea7eaca0704497"
+  integrity sha512-FTJdbopDgnARFgxIRZCL1kKxGgfa+UlWHnHVy5j+yFAK4XQp93BVYlMMescUk9fq6UHpZyb3Ysgl1OGL8JwoDw==
   dependencies:
     base-x "4.0.0"
     blakejs "1.2.1"
     buffer "^6.0.3"
     cross-fetch "^3.1.5"
+    eventemitter3 "^4.0.7"
+
+"@alephium/web3@^0.2.0-rc.19":
+  version "0.2.0-rc.30"
+  resolved "https://registry.yarnpkg.com/@alephium/web3/-/web3-0.2.0-rc.30.tgz#295cca0a25754284ccefe82c12c406ed3f83a213"
+  integrity sha512-HRGDmIE6HtVVxTGJNmn5uQS/NjoE9FTrLiULwLn6R/QYrM7QBOOECOrvZypEsoGTLJzRUXg9Cyp9ljfvyjUTNQ==
+  dependencies:
+    base-x "4.0.0"
+    blakejs "1.2.1"
+    buffer "^6.0.3"
+    cross-fetch "^3.1.5"
+    elliptic "6.5.4"
     eventemitter3 "^4.0.7"
 
 "@ampproject/remapping@^2.1.0":
@@ -3480,6 +3492,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.11.6.tgz#df929d1bb2eee5afdda598a41930fe50b43eaa6a"
   integrity sha512-Exw4yUWMBXM3X+8oqzJNRqZSwUAaS4+7NdvHqQuFi/d+synz++xmX3QIf+BFqneW8N31R8Ky+sikfZUXq07ggQ==
 
+"@types/node@16.7.8":
+  version "16.7.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.8.tgz#2448be5f24fe6b77114632b6350fcd219334651e"
+  integrity sha512-8upnoQU0OPzbIkm+ZMM0zCeFCkw2s3mS0IWdx0+AAaWqm4fkBb0UJp8Edl7FVKRamYbpJC/aVsHpKWBIbiC7Zg==
+
 "@types/node@18.0.4":
   version "18.0.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.4.tgz#48aedbf35efb3af1248e4cd4d792c730290cd5d6"
@@ -3494,11 +3511,6 @@
   version "14.18.29"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.29.tgz#a0c58d67a42f8953c13d32f0acda47ed26dfce40"
   integrity sha512-LhF+9fbIX4iPzhsRLpK5H7iPdvW8L4IwGciXQIOEcuF62+9nw/VQVsOViAOOGxY3OlOKGLFv0sWwJXdwQeTn6A==
-
-"@types/node@^16.7.8":
-  version "16.11.59"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.59.tgz#823f238b9063ccc3b3b7f13186f143a57926c4f6"
-  integrity sha512-6u+36Dj3aDzhfBVUf/mfmc92OEdzQ2kx2jcXGdigfl70E/neV21ZHE6UCz4MDzTRcVqGAM27fk+DLXvyDsn3Jw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
